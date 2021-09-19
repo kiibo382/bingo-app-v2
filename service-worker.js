@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.dcde38985fba9942dd683df11590ad8f.js"
+  "/bingo-app-v2/precache-manifest.1951fa63c9771ca88a8522eae4a09600.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "bingo-vue2"});
+workbox.core.setCacheNameDetails({prefix: "bingo-app-v2"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
