@@ -1,6 +1,5 @@
 <template>
   <div id="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
     <router-link to="/bingo">Go to Bingo</router-link>
     <BingoMain />
   </div>
