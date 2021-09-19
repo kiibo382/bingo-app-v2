@@ -33,13 +33,16 @@ export default Vue.extend({
   components: {
     BingoCardEach
   },
-  mounted: function () {
-    window.onbeforeunload = function() {
-      return 'Do you want to reload? The data will be deleted.';
+  methods: {
+    leaveAlert (event: any) {
+      event.returnValue = "Do you want to reload? The data will be deleted."
     }
   },
+  created () {
+    window.addEventListener("beforeunload", this.leaveAlert)
+  },
   destroyed () {
-    window.onbeforeunload = null
+    window.removeEventListener("beforeunload", this.leaveAlert)
   }
 });
 </script>
