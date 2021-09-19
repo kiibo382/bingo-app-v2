@@ -1,6 +1,9 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
+import BingoMain from "../components/bingo/BingoMain.vue";
+import BingoCard from "../components/bingo/BingoCard.vue";
+import BingoDraw from "../components/bingo/BingoDraw.vue";
 
 Vue.use(VueRouter);
 
@@ -11,13 +14,19 @@ const routes: Array<RouteConfig> = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/bingo",
+    name: "Bingo",
+    component: BingoMain,
+  },
+  {
+    path: "/bingo/card",
+    name: "BingoCard",
+    component: BingoCard,
+  },
+  {
+    path: "/bingo/draw",
+    name: "BingoDraw",
+    component: BingoDraw,
   },
 ];
 
