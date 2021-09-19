@@ -12,7 +12,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  data: () => {
+  data: function () {
     return {
       isCardClick: false,
       width: window.innerWidth < 500 ? "40px" : "80px",
@@ -41,7 +41,7 @@ export default Vue.extend({
       this.fontSize = window.innerWidth < 500 ? "5px" : "16px";
     }
   },
-  mounted: function () {
+  mounted: function() {
     window.addEventListener('resize', this.handleResize)
   },
 });

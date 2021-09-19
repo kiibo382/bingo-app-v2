@@ -14,7 +14,7 @@ import Vue from "vue";
 import BingoCardEach from "./BingoCardEach.vue"
 
 export default Vue.extend({
-  data: () => {
+  data: function() {
     const randintList = []
     let randintRow = []
     const min = Math.ceil(1);
@@ -32,6 +32,14 @@ export default Vue.extend({
   },
   components: {
     BingoCardEach
+  },
+  mounted: function () {
+    window.onbeforeunload = function() {
+      return 'Do you want to reload? The data will be deleted.';
+    }
+  },
+  destroyed () {
+    window.onbeforeunload = null
   }
 });
 </script>
