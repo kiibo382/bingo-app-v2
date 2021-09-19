@@ -1,4 +1,7 @@
-# bingo-vue2
+# bingo-app-v2
+Create this to try github pages(see below)
+https://kiibo382.github.io/bingo-app-v2/
+
 
 ## Project setup
 ```
@@ -19,6 +22,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
